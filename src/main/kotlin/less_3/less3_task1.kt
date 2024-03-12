@@ -1,4 +1,5 @@
 package org.example.less_3
+
 /*
 The greetings :)
  */
@@ -19,6 +20,6 @@ fun main() {
 
 }
 
-//Greetings set
+//Greetings  set
 const val GREETING_FOR_DAY = "Good day, Mr."
 const val GREETING_FOR_EVENING = "Good evening, Mr."
