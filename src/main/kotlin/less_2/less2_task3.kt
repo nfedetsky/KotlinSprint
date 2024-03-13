@@ -11,13 +11,15 @@ fun main() {
     val timeToDestination = 457
 
     //Bringing time to a general form
-    val hourToDestination = timeToDestination / 60
-    val minutesToDestination = timeToDestination / 60 % 60
+    val hourToDestination = timeToDestination / SEC_TO_MIN
+    val minutesToDestination = timeToDestination / SEC_TO_MIN % SEC_TO_MIN
 
     //The calculation of arrival time
-    val endMinutes = (startMinutes + minutesToDestination) % 60
-    val endHour = (startHour + hourToDestination) + (startMinutes + minutesToDestination) / 60
+    val endMinutes = (startMinutes + minutesToDestination) % SEC_TO_MIN
+    val endHour = (startHour + hourToDestination) + (startMinutes + minutesToDestination) / SEC_TO_MIN
 
     //Output arrival time to console
     println("Arrival time is $endHour:$endMinutes")
 }
+
+const val SEC_TO_MIN = 60
