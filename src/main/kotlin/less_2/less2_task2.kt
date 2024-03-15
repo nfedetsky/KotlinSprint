@@ -1,16 +1,21 @@
 package org.example.less_2
 
 /*
-The
+The salary calculation
  */
 fun main() {
 
+    val oldStaffAmount = 50
+    val staffSalary = 30000
+    val internAmount =30
+    val internSalary = 20000
+
     //The salary calculation for employees
-    val fotOldStaff = OLD_STAFFS_AMOUNT * STAFF_SALARY
+    val fotOldStaff = oldStaffAmount * staffSalary
     //The salary calculation for interns
-    val allCostStaff = INTERN_AMOUNT * INTERN_SALARY + fotOldStaff
+    val allCostStaff = internAmount * internSalary + fotOldStaff
     //The average salary per employee after employment of interns
-    val averageFotOfStaff = allCostStaff / (OLD_STAFFS_AMOUNT + INTERN_AMOUNT)
+    val averageFotOfStaff = allCostStaff / (oldStaffAmount + internAmount)
 
     //Outputting of results to console
     println("Value of old staff FOT is $fotOldStaff per month")
@@ -18,8 +23,3 @@ fun main() {
     println("Value of average FOT of staff is $averageFotOfStaff per month")
 
 }
-
-const val OLD_STAFFS_AMOUNT = 50
-const val STAFF_SALARY = 30000
-const val INTERN_AMOUNT = 30
-const val INTERN_SALARY = 20000
