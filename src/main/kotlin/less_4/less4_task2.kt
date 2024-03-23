@@ -13,18 +13,29 @@ fun main() {
     //Comparison of the first cargo
     proposedWeight = 20
     proposedLiquid = 80
-    anouncement =
-        "Груз с весом ${(proposedWeight)} кг и объемом ${(proposedLiquid)} л соответствует категории 'Average':"
+    anouncement = "Груз с весом ${(proposedWeight)} кг и объемом " +
+            "${(proposedLiquid)} л соответствует категории 'Average': "
 
-    println("$anouncement ${proposedWeight >= AVERAGE_WEIGHT_MIN && proposedWeight <= AVERAGE_WEIGHT_MAX && proposedLiquid <= VOLUME_LIQUID}")
+    println(
+        "$anouncement ${
+            proposedWeight >= AVERAGE_WEIGHT_MIN &&
+                    proposedWeight <= AVERAGE_WEIGHT_MAX && proposedLiquid < VOLUME_LIQUID
+        }"
+    )
 
     //Comparison of the second cargo
     proposedWeight = 50
     proposedLiquid = 100
     anouncement =
-        "Груз с весом ${(proposedWeight)} кг и объемом ${(proposedLiquid)} л соответствует категории 'Average':"
+        "Груз с весом ${(proposedWeight)} кг и объемом " +
+                "${(proposedLiquid)} л соответствует категории 'Average':"
 
-    println("$anouncement ${proposedWeight >= AVERAGE_WEIGHT_MIN && proposedWeight <= AVERAGE_WEIGHT_MAX && proposedLiquid <= VOLUME_LIQUID}")
+    println(
+        "$anouncement ${
+            proposedWeight >= AVERAGE_WEIGHT_MIN &&
+                    proposedWeight <= AVERAGE_WEIGHT_MAX && proposedLiquid < VOLUME_LIQUID
+        }"
+    )
 
 }
 
