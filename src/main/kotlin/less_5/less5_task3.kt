@@ -1,6 +1,6 @@
 package org.example.less_5
 /*
-The lottery
+The happy lottery
  */
 fun main(){
 
