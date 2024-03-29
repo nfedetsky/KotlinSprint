@@ -7,21 +7,21 @@ fun main() {
     //Entering parameters
 
     println("Наличие повреждений")
-    var damagePresent: Boolean = readln().toBoolean()
+    val isDamage: Boolean = readln().toBoolean()
     println("Ввод количества персонала")
-    var staffCurrent: Int = readln().toInt()
+    val staffCurrent: Int = readln().toInt()
     println("Ввод количесвтва ящиков провизии")
-    var numberOfProvisionBoxes: Int = readln().toInt()
+    val numberOfProvisionBoxes: Int = readln().toInt()
     println("Благоприятность погоды")
-    var favorableWeatherConditions: Boolean = readln().toBoolean()
+    val isWeatherCondition: Boolean = readln().toBoolean()
 
 
     //Input data analysis block
 
-    val dataAnalysis = ((damagePresent == SHIP_INTEGRITY) && (staffCurrent in (STAFF_NUMBER_MIN..STAFF_NUMBER_MAX))
+    val dataAnalysis = ((isDamage == SHIP_INTEGRITY) && (staffCurrent in (STAFF_NUMBER_MIN..STAFF_NUMBER_MAX))
             && (numberOfProvisionBoxes > PROVISION_BOXES_MIN)) ||
-            ((damagePresent != SHIP_INTEGRITY) && (staffCurrent == STAFF_NUMBER_MAX) &&
-                    (numberOfProvisionBoxes >= PROVISION_BOXES_MIN) && (favorableWeatherConditions == FAVORABLE_WETHER_GOOD))
+            ((isDamage != SHIP_INTEGRITY) && (staffCurrent == STAFF_NUMBER_MAX) &&
+                    (numberOfProvisionBoxes >= PROVISION_BOXES_MIN) && (isWeatherCondition == FAVORABLE_WETHER_GOOD))
 
     //Output analysis result
     println("Корабль может выйти при введенных параметрах: $dataAnalysis")
