@@ -4,25 +4,25 @@ Growing beans
  */
 fun main() {
 
-    //Basic data block
-    val weatherSunny: Boolean = true
-    val tentOpen: Boolean = true
-    val humidity: Int = 20
-    val season: String = "Winter"
-    val question = "Благоприятные ли условия сейчас для роста бобовых? "
-
     //Data block for comparison
-    val weatherTodaySunny: Boolean = true
-    val tentOpenCurrently: Boolean = true
+    val isTodaySunny: Boolean = true
+    val isTentOpenCurrently: Boolean = true
     val humidityToday: Int = 20
     val seasonCurrently: String = "Winter"
 
     //Comparison result
-    val comparisonResult = (weatherSunny == weatherTodaySunny) &&
-            (tentOpen == tentOpenCurrently) &&
-            (humidity == humidityToday) &&
-            (season == seasonCurrently)
+    val comparisonResult = (WETHER_SUNNY == isTodaySunny) &&
+            (TENT_OPEN == isTentOpenCurrently) &&
+            (HUMIDITY == humidityToday) &&
+            (SEASON == seasonCurrently)
 
-    println("$question $comparisonResult")
+    println("$QUESTION $comparisonResult")
 
 }
+
+//Basic data block
+const val WETHER_SUNNY: Boolean = true
+const val TENT_OPEN: Boolean = true
+const val HUMIDITY: Int = 20
+const val SEASON: String = "Spring"
+const val QUESTION = "Благоприятные ли условия сейчас для роста бобовых? "
