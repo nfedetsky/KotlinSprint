@@ -7,7 +7,7 @@ import java.util.*
 fun main() {
 
     print("Insert Your year of birth:" + " ")
-    val userYearBirth = readln()!!.toInt()
+    val userYearBirth = readln().toInt()
     val myData: Calendar = Calendar.getInstance()
     val userAge = myData.get(Calendar.YEAR) - userYearBirth
 
