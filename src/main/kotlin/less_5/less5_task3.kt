@@ -19,8 +19,8 @@ fun main(){
    val textResult = if ((inputLuckyNumberTwo == luckyNumberTwo && inputLuckyNumberOne == luckyNumberOne) ||
        (inputLuckyNumberOne == luckyNumberTwo && inputLuckyNumberTwo == luckyNumberOne))
         "Congratulation! You win!"
-    else if ((inputLuckyNumberOne == luckyNumberOne && inputLuckyNumberTwo != luckyNumberTwo) ||
-       (inputLuckyNumberOne == luckyNumberTwo && inputLuckyNumberTwo != luckyNumberOne))
+    else if (inputLuckyNumberOne == luckyNumberOne || inputLuckyNumberTwo == luckyNumberTwo ||
+       inputLuckyNumberOne == luckyNumberTwo || inputLuckyNumberTwo == luckyNumberOne)
         "Don't be upset! You've got a consolation prize!"
     else "You lose... Nothing bad! You'll be lucky in love!"
 
