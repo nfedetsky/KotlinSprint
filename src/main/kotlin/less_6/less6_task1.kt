@@ -12,9 +12,9 @@ fun main() {
     var i = 0
 
     println("Input Your  new login:")
-    userLogin = readln().toString()
+    userLogin = readln()
     println("Input Your new password")
-    userPass = readln().toString()
+    userPass = readln()
 
     println("Please log in to the system")
     do {
