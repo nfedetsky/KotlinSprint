@@ -9,8 +9,6 @@ fun main() {
     var userPass: String
     var userInputLogin: String
     var userInputPass: String
-    var i = 0
-
     println("Input Your  new login:")
     userLogin = readln()
     println("Input Your new password")
