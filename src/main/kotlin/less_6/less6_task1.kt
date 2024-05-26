@@ -19,9 +19,9 @@ fun main() {
     println("Please log in to the system")
     do {
         println("Input your login: ")
-        userInputLogin = readln().toString()
+        userInputLogin = readln()
         println("Input your password: ")
-        userInputPass = readln().toString()
+        userInputPass = readln()
         if (userInputLogin != userLogin || userInputPass != userPass) println("Authorization failed. Try again")
     } while (userInputLogin != userLogin || userInputPass != userPass)
 
