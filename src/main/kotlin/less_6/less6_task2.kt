@@ -6,16 +6,9 @@ Counter
 fun main() {
 
     println("Введите количество секунд:")
-    var secTimer = readln().toInt()
-    var shild = 0
-        while (secTimer > 0) {
-        secTimer--
-        shild++
-        print("===")
-        Thread.sleep(1000)
-    }
-    println()
-    println("Прошло: $shild секунд")
+    var secTimer = readln().toInt() * 1000
+    Thread.sleep(secTimer.toLong())
+    println("Прошло: ${secTimer/1000} секунд")
     Thread.sleep(10000000)
 
 }
