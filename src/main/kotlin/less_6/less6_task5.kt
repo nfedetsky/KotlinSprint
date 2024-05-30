@@ -11,6 +11,7 @@ fun main() {
     var userPass = "admin"
     var userInputLogin: String
     var userInputPass: String
+    var userTries = 0
 
     println("For verify solve the example")
 
@@ -22,7 +23,12 @@ fun main() {
         val mashinRez = arg1 + arg2
         println("Input your answer for this example: $arg1 + $arg2:")
         val userRez = readln().toInt()
+        userTries++
         if (userRez == mashinRez) println("Verify successful")
+        else if (userTries == 3) {
+            println("Verify failed. Access denied")
+            return
+        }
         else println("Verify failed. Try again.")
     } while (userRez != mashinRez)
 
