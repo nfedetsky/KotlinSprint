@@ -25,7 +25,7 @@ fun main() {
         val userRez = readln().toInt()
         userTries++
         if (userRez == mashinRez) println("Verify successful")
-        else if (userTries == 3) {
+        else if (userTries == USER_TRIES) {
             println("Verify failed. Access denied")
             return
         }
@@ -45,3 +45,4 @@ fun main() {
 
     println("Authorization successful")
 }
+const val USER_TRIES = 3
