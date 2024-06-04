@@ -26,5 +26,5 @@ fun main() {
             break
         } else println("Authorization failed. Access denied. You have ${triesCountdown[i]}.")
     }
-    println("Your account has blocked. Contact your system administrator.")
+
 }
