@@ -1,14 +1,11 @@
 package org.example.less_7
+
 /*
-The password generator second
+The password generator the second
  */
 fun main() {
-    val passSimbol: CharRange = ('a'..'z')
-    val passHighSimbol: CharRange = ('A'..'Z')
-    val passNumeric: CharRange = ('1'..'9')
-    val passSpecSimbol = arrayOf('!', '@', '#', '$', '%', '&', '*', '?', '/')
-    val lenPassString = 0..255
-    val tempArray = mutableSetOf<Char>()
+
+    val tempArray = ('a'..'z') + ('A'..'Z') + ('1'..'9')
     var passString: String
     var userNumber: Int
 
@@ -18,12 +15,6 @@ fun main() {
     userNumber = readln().toInt()
 
     if (userNumber >= LIMIT_LENGHT_OF_PASSWORD_WORD) {
-        for (i in lenPassString) {
-            tempArray.add(passSimbol.random())
-            tempArray.add(passHighSimbol.random())
-            tempArray.add(passNumeric.random())
-            tempArray.add(passSpecSimbol.random())
-        }
         passString = tempArray.shuffled().take(userNumber).joinToString().replace(", ", "")
         println(passString)
     } else println("Length does not meet requirements")
